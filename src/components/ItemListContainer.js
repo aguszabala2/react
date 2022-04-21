@@ -5,7 +5,7 @@ const ItemListContainer = ({name}) => {
         <div tabindex="0" className="collapse">
             <input type="checkbox"/> 
             <div className="collapse-title text-xl font-medium">
-                Welcome!
+                Welcome {name}!
             </div>
             <div className="collapse-content"> 
                 <p>Our awesome page is not currently available. Wait for us please.</p>

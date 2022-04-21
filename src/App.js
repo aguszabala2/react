@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <DaisyNavbar/>
-      <ItemListContainer/>
+      <ItemListContainer name="Juan"/>
     </div>
   );
 }
