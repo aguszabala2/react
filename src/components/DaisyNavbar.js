@@ -1,4 +1,5 @@
 import React from 'react'
+import CartWidget from './CartWidget'
 
 const DaisyNavbar = () => {
     return (
@@ -12,6 +13,7 @@ const DaisyNavbar = () => {
                 <li><a>Travel</a></li>
                 <li><a>About Us</a></li>
             </ul>
+            <CartWidget/>
         </div>
     </div>
     )
