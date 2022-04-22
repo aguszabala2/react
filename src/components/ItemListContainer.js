@@ -2,7 +2,7 @@ import React from 'react'
 
 const ItemListContainer = ({name}) => {
     return (
-        <div tabindex="0" className="collapse">
+        <div tabindex="0" className="collapse text-slate-100">
             <input type="checkbox"/> 
             <div className="collapse-title text-xl font-medium">
                 Welcome {name}!

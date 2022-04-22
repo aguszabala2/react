@@ -1,7 +1,8 @@
 .App {
   text-align: center;
-  /* background-image: url("https://desktophut.com/wp-content/uploads/2018/09/XAKrkAaKSPrmF8l4Pi26-scaled.jpg.webp");
-  background-size: cover; */
+  height: 100vh;
+  background-image: url("https://desktophut.com/wp-content/uploads/2018/09/XAKrkAaKSPrmF8l4Pi26-scaled.jpg.webp");
+  background-size: cover;
 }
 
 .App-logo {
@@ -37,4 +38,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.font-logo {
+  font-family: 'Wallpoet', cursive;
+  font-size: 1.8rem;
+}
+
+.font-gugi {
+  font-family: 'Gugi', cursive;
+  font-size: 1.8rem;
 }
