@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <DaisyNavbar/>
       <ItemListContainer name="Juan"/>
-      <ItemCount/>
+      <ItemCount stock='20'/>
     </div>
   );
 }

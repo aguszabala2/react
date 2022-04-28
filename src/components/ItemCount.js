@@ -1,24 +1,26 @@
 import React, { useState } from 'react'
 
-const ItemCount = () => {
+const ItemCount = ({stock}) => {
 
     const [count, setCount] = useState(0);
 
-    const subHandler = () => {
+    const substractHandler = () => {
         if (count >= 1) {
             setCount(count - 1)
         }
     }
 
     const addHandler = () => {
-        setCount(count + 1)
+        if (count < stock) {
+            setCount(count + 1)
+        }
     }
 
     return (
         <>
-            <div class="stats shadow backdrop-filter backdrop-blur-lg bg-white">
+            <div class="stats shadow bg-white">
                 <div class="stat place-items-center">
-                    <button onClick={subHandler} class="stat-value">-</button>
+                    <button onClick={substractHandler} class="stat-value">-</button>
                 </div>
                 <div class="stat place-items-center">
                     <div class="stat-value text-primary">{count}</div>
