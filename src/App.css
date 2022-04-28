@@ -1,8 +1,8 @@
 .App {
   text-align: center;
-  height: 100vh;
+  height: 300vh;
   background-image: url("https://desktophut.com/wp-content/uploads/2018/09/XAKrkAaKSPrmF8l4Pi26-scaled.jpg.webp");
-  background-size: cover;
+  background-size: contain;
 }
 
 .App-logo {

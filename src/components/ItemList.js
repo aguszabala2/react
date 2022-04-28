@@ -1,18 +1,16 @@
 import React from 'react'
+import Item from './Item'
 
 const ItemList = ({personal}) => {
     return (
-        <div>
+        <span>
         {personal.map(thisperson => {
             return(
-                <div>
-                    <h1>{thisperson.firstName} {thisperson.lastName}</h1>
-                    <p>{thisperson.company}</p>
-                </div>
+                <Item personal={thisperson} key={thisperson.id}/>
             )
         })}
             <div>{ItemList}</div>
-        </div>
+        </span>
     )
 }
 
