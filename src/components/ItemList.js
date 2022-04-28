@@ -3,7 +3,7 @@ import Item from './Item'
 
 const ItemList = ({personal}) => {
     return (
-        <span>
+        <span className='flex flex-wrap justify-center'>
         {personal.map(thisperson => {
             return(
                 <Item personal={thisperson} key={thisperson.id}/>

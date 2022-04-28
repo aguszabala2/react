@@ -18,7 +18,7 @@ const ItemCount = ({stock}) => {
 
     return (
         <>
-            <div class="stats shadow bg-white">
+            <div class="stats shadow bg-white m-4">
                 <div class="stat place-items-center">
                     <button onClick={substractHandler} class="stat-value">-</button>
                 </div>

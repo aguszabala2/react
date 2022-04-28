@@ -46,18 +46,6 @@ const personalList = [{
     "lastName": "Bourgourd",
     "company": "Moen, Pfannerstill and Grady",
     "avatar": "https://robohash.org/nonautquam.png?size=70x70&set=set1"
-  }, {
-    "id": 9,
-    "firstName": "Salomé",
-    "lastName": "Deeson",
-    "company": "Johnston, Auer and Casper",
-    "avatar": "https://robohash.org/officiaipsamsed.png?size=70x70&set=set1"
-  }, {
-    "id": 10,
-    "firstName": "Océane",
-    "lastName": "Valero",
-    "company": "Conn, Hoppe and Hoppe",
-    "avatar": "https://robohash.org/molestiaeetipsum.png?size=70x70&set=set1"
   }]
   
 export default personalList
