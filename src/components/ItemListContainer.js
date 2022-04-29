@@ -6,7 +6,7 @@ function getPersonalList(){
     return new Promise ((res, rej) => {
         setTimeout(() => {
             res(personalList);
-        }, 500)
+        }, 1000)
     })
 }
 
@@ -27,7 +27,8 @@ const ItemListContainer = ({name}) => {
                 Welcome {name}!
             </div>
             <div className="collapse-content"> 
-                <p>Our awesome page is not currently available. Wait for us please.</p>
+                <p>We can give you what your company needs. Employees, spaceships, event and travel tickets or even new lands for your expansion.</p>
+                <p>We are the company of your future.</p>
             </div>
             <ItemList personal={personalList}/>
         </div>

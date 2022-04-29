@@ -18,15 +18,15 @@ const ItemCount = ({stock}) => {
 
     return (
         <>
-            <div class="stats shadow bg-white m-4">
-                <div class="stat place-items-center">
-                    <button onClick={substractHandler} class="stat-value">-</button>
+            <div className="stats shadow bg-white m-4">
+                <div className="stat place-items-center">
+                    <button onClick={substractHandler} className="stat-value">-</button>
                 </div>
-                <div class="stat place-items-center">
-                    <div class="stat-value text-primary">{count}</div>
+                <div className="stat place-items-center">
+                    <div className="stat-value text-primary">{count}</div>
                 </div>
-                <div class="stat place-items-center">
-                    <button onClick={addHandler} class="stat-value">+</button>
+                <div className="stat place-items-center">
+                    <button onClick={addHandler} className="stat-value">+</button>
                 </div>
             </div>
         </>

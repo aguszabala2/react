@@ -9,8 +9,8 @@ const DaisyNavbar = () => {
         </div>
         <div className="flex-none">
             <ul className="menu menu-horizontal p-0">
-                <li className="hover:bg-slate-100 hover:bg-opacity-10 hover:rounded-lg"><a>Lands</a></li>
-                <li className="hover:bg-slate-100 hover:bg-opacity-10 hover:rounded-lg"><a>Travel</a></li>
+                <li className="hover:bg-slate-100 hover:bg-opacity-10 hover:rounded-lg"><a>Employees</a></li>
+                <li className="hover:bg-slate-100 hover:bg-opacity-10 hover:rounded-lg"><a>Travels</a></li>
                 <li className="hover:bg-slate-100 hover:bg-opacity-10 hover:rounded-lg"><a>About Us</a></li>
             </ul>
             <CartWidget/>
