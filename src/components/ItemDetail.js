@@ -1,6 +1,7 @@
 import React from 'react'
 
 const ItemDetail = ({personal}) => {
+
     return (
         <div className="card w-1/3 glass m-4">
             <figure><img src={personal.avatar} alt="avatar" className='w-1/4'/></figure>

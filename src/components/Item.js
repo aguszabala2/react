@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Item = ({personal}) => {
     return (
@@ -8,6 +9,9 @@ const Item = ({personal}) => {
                 <h2 className="text-center font-bold text-lg">{personal.firstName} {personal.lastName}</h2>
                 <p className='text-center'>{personal.company}</p>
                 <p className='text-center'>{personal.work}</p>
+                <Link to={`/employees/${personal.id}`}>
+                <button class="btn btn-active glass mt-3 hover:text-lg">MORE</button>
+                </Link>
             </div>
         </div>
     )

@@ -27,8 +27,9 @@ const ItemListContainer = ({name}) => {
                 Welcome {name}!
             </div>
             <div className="collapse-content"> 
-                <p>We can give you what your company needs. Employees, spaceships, event and travel tickets or even new lands for your expansion.</p>
-                <p>We are the company of your future.</p>
+                <p>These are all the robots you can hire to work in your company.</p>
+                <p>They were selected as the most redituables models of all the markets in the galaxy, so you will be choosing into the best of the best.</p>
+                <p>Enjoy!.</p>
             </div>
             <ItemList personal={personalList}/>
         </div>
