@@ -1,34 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import personalList from '../data/personalList'
+import robotStore from '../data/robotStore'
 import ItemDetail from './ItemDetail';
 
-function getPersonal(id){
+function getRobots(id){
     return new Promise ((res, rej) => {
         setTimeout(() => {
-            const personFound = personalList.find((personal) =>{
-                return parseInt(id) === personal.id
+            const robotFound = robotStore.find((robots) =>{
+                return parseInt(id) === robots.id
             })
-            res(personFound);
-            // res(personalList)
+            res(robotFound);
         }, 1000)
     })
 }
 
 const ItemDetailContainer = () => {
 
-    const [personal, setPersonal] = useState([]);
-    const { personalId } = useParams()
+    const [robots, setRobots] = useState([]);
+    const { robotsId } = useParams()
 
     useEffect( () => {
-        getPersonal(personalId).then( respuesta => {
-            setPersonal(respuesta[0])}
+        getRobots(robotsId).then( respuesta => {
+            setRobots(respuesta)}
         )
-    }, [personalId])
+    }, [robotsId])
 
     return (
         <div tabIndex="0" className="collapse text-slate-100">
-            <ItemDetail personal={personal}/>
+            <ItemDetail robots={robots}/>
         </div>
     )
 }

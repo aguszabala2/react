@@ -1,26 +1,39 @@
 import React, { useEffect, useState } from 'react'
-import personalList from '../data/personalList'
+import robotStore from '../data/robotStore'
 import ItemList from './ItemList';
+import ItemNavbar from './ItemNavbar';
+import { useParams } from 'react-router-dom';
 
-function getPersonalList(){
+function getRobotStore(planetId){
     return new Promise ((res, rej) => {
         setTimeout(() => {
-            res(personalList);
+            if(planetId !== undefined) {
+                const arrayFiltered = robotStore.filter((robots) => {
+                    return robots.planet === planetId
+                })
+                res(arrayFiltered)
+            }
+            else{
+            res(robotStore)};
         }, 1000)
     })
 }
 
 const ItemListContainer = ({name}) => {
 
-    const [personalList, setPersonalList] = useState([]);
+    const [robotStore, setRobotStore] = useState([]);
+    const {planetId} = useParams();
+
 
     useEffect( () => {
-        getPersonalList().then( respuesta => {
-            setPersonalList(respuesta)}
+        getRobotStore(planetId).then( respuesta => {
+            setRobotStore(respuesta)}
         )
-    }, [])
+    }, [planetId])
 
     return (
+        <>
+        <ItemNavbar/>
         <div tabindex="0" className="collapse text-slate-100">
             <input type="checkbox"/> 
             <div className="collapse-title text-xl font-medium">
@@ -31,8 +44,9 @@ const ItemListContainer = ({name}) => {
                 <p>They were selected as the most redituables models of all the markets in the galaxy, so you will be choosing into the best of the best.</p>
                 <p>Enjoy!.</p>
             </div>
-            <ItemList personal={personalList}/>
+            <ItemList robots={robotStore}/>
         </div>
+        </>
     )
 }
 

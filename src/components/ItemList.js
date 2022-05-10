@@ -1,12 +1,12 @@
 import React from 'react'
 import Item from './Item'
 
-const ItemList = ({personal}) => {
+const ItemList = ({robots}) => {
     return (
         <span className='flex flex-wrap justify-center'>
-        {personal.map(thisperson => {
+        {robots.map(thisrobot => {
             return(
-                <Item personal={thisperson} key={thisperson.id}/>
+                <Item robots={thisrobot} key={thisrobot.id}/>
             )
         })}
             <div>{ItemList}</div>

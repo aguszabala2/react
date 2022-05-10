@@ -18,12 +18,12 @@ const ItemCount = ({stock}) => {
 
     return (
         <>
-            <div className="stats shadow bg-white m-4">
+            <div className="stats shadow glass w-auto mt-5">
                 <div className="stat place-items-center">
                     <button onClick={substractHandler} className="stat-value">-</button>
                 </div>
                 <div className="stat place-items-center">
-                    <div className="stat-value text-primary">{count}</div>
+                    <div className="stat-value text-blue-900">{count}</div>
                 </div>
                 <div className="stat place-items-center">
                     <button onClick={addHandler} className="stat-value">+</button>
