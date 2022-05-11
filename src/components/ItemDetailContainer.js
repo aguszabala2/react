@@ -15,7 +15,7 @@ function getRobots(id){
 }
 
 const ItemDetailContainer = () => {
-
+    
     const [robots, setRobots] = useState([]);
     const { robotsId } = useParams()
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, onAdd}) => {
 
     const [count, setCount] = useState(0);
 
@@ -8,6 +8,10 @@ const ItemCount = ({stock}) => {
         if (count >= 1) {
             setCount(count - 1)
         }
+    }
+
+    const clickHandler = () => {
+        onAdd(count);
     }
 
     const addHandler = () => {
@@ -29,6 +33,7 @@ const ItemCount = ({stock}) => {
                     <button onClick={addHandler} className="stat-value">+</button>
                 </div>
             </div>
+            <button onClick={clickHandler} className="btn btn-active glass mt-3 hover:text-lg text-blue-900 font-bold">HIRE NOW</button>
         </>
     )
 }

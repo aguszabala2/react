@@ -1,7 +1,14 @@
 import React from 'react'
 import ItemCount from './ItemCount'
+import { useState } from 'react'
 
 const ItemDetail = ({robots}) => {
+    const [isInCart, setIsInCart] = useState(false)
+
+    function onAdd(count){
+        console.log(`Agregue al carrito ${count} items`);
+        setIsInCart(true)
+    }
 
     return (
         <div className='flex justify-center'>
@@ -12,8 +19,12 @@ const ItemDetail = ({robots}) => {
                     <p className='text-center'>{robots.planet}</p>
                     <p className='text-center'>{robots.owner}</p>
                     <p className='text-center text-black'>{robots.price} /per week</p>
-                    <ItemCount stock={robots.stock}/>
-                    <button className="btn btn-active glass mt-3 hover:text-lg text-blue-900 font-bold">HIRE NOW</button>
+                    {isInCart? 
+                        <p>This employee is already in your cart.</p>
+                    :
+                        <ItemCount onAdd={onAdd} stock={robots.stock}/>
+                    }
+
                 </div>
             </div>
         </div>
