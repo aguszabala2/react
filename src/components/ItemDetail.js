@@ -1,6 +1,7 @@
 import React from 'react'
 import ItemCount from './ItemCount'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const ItemDetail = ({robots}) => {
     const [isInCart, setIsInCart] = useState(false)
@@ -20,7 +21,9 @@ const ItemDetail = ({robots}) => {
                     <p className='text-center'>{robots.owner}</p>
                     <p className='text-center text-black'>{robots.price} /per week</p>
                     {isInCart? 
-                        <p>This employee is already in your cart.</p>
+                        <Link to="/cart">
+                        <button class="btn btn-active glass mt-3 hover:text-lg">CART</button>
+                        </Link>
                     :
                         <ItemCount onAdd={onAdd} stock={robots.stock}/>
                     }
