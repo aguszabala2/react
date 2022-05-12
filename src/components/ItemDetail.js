@@ -27,7 +27,6 @@ const ItemDetail = ({robots}) => {
                     :
                         <ItemCount onAdd={onAdd} stock={robots.stock}/>
                     }
-
                 </div>
             </div>
         </div>

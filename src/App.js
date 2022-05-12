@@ -6,12 +6,14 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import { Routes, BrowserRouter, Route } from 'react-router-dom' 
 import Welcome from './components/Welcome';
 import Cart from './components/Cart';
+import { CartContextProvider } from './context/CartContext';
 
 function App() {
 
   return (
     <div className="App">
         <BrowserRouter>
+        <CartContextProvider>
           <DaisyNavbar/>  
             <Routes>
               <Route path='/' element={<Welcome name="Juan"/>}/>
@@ -20,6 +22,7 @@ function App() {
               <Route path='/employees/:robotsId' element={<ItemDetailContainer/>}/>
               <Route path='/cart/'element={<Cart/>}/>
             </Routes>
+        </CartContextProvider>
         </BrowserRouter>
     </div>
   );
