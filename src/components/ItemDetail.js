@@ -2,13 +2,17 @@ import React from 'react'
 import ItemCount from './ItemCount'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import useCartContext from '../context/CartContext'
 
 const ItemDetail = ({robots}) => {
     const [isInCart, setIsInCart] = useState(false)
+    const {addToCart} = useCartContext();
 
     function onAdd(count){
-        console.log(`Agregue al carrito ${count} items`);
+
         setIsInCart(true)
+        addToCart(robots, count)
+        console.log('Aregado al cart', robots, count)
     }
 
     return (
@@ -22,7 +26,7 @@ const ItemDetail = ({robots}) => {
                     <p className='text-center text-black'>{robots.price} /per week</p>
                     {isInCart? 
                         <Link to="/cart">
-                        <button class="btn btn-active glass mt-3 hover:text-lg">CART</button>
+                        <button className="btn btn-active glass mt-3 hover:text-lg">CART</button>
                         </Link>
                     :
                         <ItemCount onAdd={onAdd} stock={robots.stock}/>

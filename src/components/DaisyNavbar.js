@@ -2,10 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import CartWidget from './CartWidget'
 import { useContext } from 'react'
-import CartContext from '../context/CartContext'
+import useCartContext from '../context/CartContext'
 
 const DaisyNavbar = () => {
-    const {contextFunction} = useContext(CartContext);
+    const {contextFunction} = useCartContext();
+    contextFunction();
     return (
     <div className="navbar backdrop-filter backdrop-blur-lg bg-opacity-30 bg-transparent text-slate-100 px-20">
         <div className="flex-1">
