@@ -15,6 +15,14 @@ const ItemDetail = ({robots}) => {
         console.log('Aregado al cart', robots, count)
     }
 
+    if(!robots){
+        return (
+            <div className='flex justify-center m-5'>
+                <button className="btn btn-square glass loading"></button>
+            </div>
+        )
+    }
+
     return (
         <div className='flex justify-center'>
             <div className="card w-1/3 glass m-4">

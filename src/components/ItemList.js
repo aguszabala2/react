@@ -1,7 +1,7 @@
 import React from 'react'
 import Item from './Item'
 
-const ItemList = ({robots}) => {
+function ItemList ({robots}) {
     return (
         <span className='flex flex-wrap justify-center'>
         {robots.map(thisrobot => {

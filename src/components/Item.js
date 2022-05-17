@@ -10,7 +10,7 @@ const Item = ({robots}) => {
                 <p className='text-center'>{robots.planet}</p>
                 <p className='text-center'>{robots.owner}</p>
                 <Link to={`/employees/${robots.id}`}>
-                <button class="btn btn-active glass mt-3 hover:text-lg">MORE</button>
+                <button className="btn btn-active glass mt-3 hover:text-lg">MORE</button>
                 </Link>
             </div>
         </div>

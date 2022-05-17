@@ -24,7 +24,6 @@ const ItemListContainer = ({name}) => {
     const [robotStore, setRobotStore] = useState([]);
     const {planetId} = useParams();
 
-
     useEffect( () => {
         getRobotStore(planetId).then( respuesta => {
             setRobotStore(respuesta)}
@@ -34,7 +33,7 @@ const ItemListContainer = ({name}) => {
     return (
         <>
         <ItemNavbar/>
-        <div tabindex="0" className="collapse text-slate-100">
+        <div tabIndex="0" className="collapse text-slate-100">
             <input type="checkbox"/> 
             <div className="collapse-title text-xl font-medium">
                 Welcome {name}!

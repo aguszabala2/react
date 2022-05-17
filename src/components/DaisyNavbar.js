@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CartWidget from './CartWidget'
-import { useContext } from 'react'
 import useCartContext from '../context/CartContext'
 
 const DaisyNavbar = () => {
@@ -20,7 +19,7 @@ const DaisyNavbar = () => {
                 <li className="hover:bg-slate-100 hover:bg-opacity-10 hover:rounded-lg"><a>Ships</a></li>
                 <li className="hover:bg-slate-100 hover:bg-opacity-10 hover:rounded-lg"><a>About Us</a></li>
             </ul>
-            <CartWidget/>
+            <Link to="/cart"><CartWidget/></Link>
         </div>
     </div>
     )
