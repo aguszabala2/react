@@ -24,16 +24,16 @@ const ItemCount = ({stock, onAdd}) => {
         <>
             <div className="stats shadow glass w-auto mt-5">
                 <div className="stat place-items-center">
-                    <button onClick={substractHandler} className="stat-value">-</button>
+                    <button onClick={substractHandler} className="stat-value text-white">-</button>
                 </div>
                 <div className="stat place-items-center">
-                    <div className="stat-value text-blue-900">{count}</div>
+                    <div className="stat-value text-slate-400">{count}</div>
                 </div>
                 <div className="stat place-items-center">
-                    <button onClick={addHandler} className="stat-value">+</button>
+                    <button onClick={addHandler} className="stat-value text-white">+</button>
                 </div>
             </div>
-            <button onClick={clickHandler} className="btn btn-active glass mt-3 hover:text-lg text-blue-900 font-bold">HIRE NOW</button>
+            <button onClick={clickHandler} className="btn btn-active glass mt-3 hover:text-lg text-white-900 font-bold">HIRE NOW</button>
         </>
     )
 }

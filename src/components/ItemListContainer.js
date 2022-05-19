@@ -1,34 +1,24 @@
 import React, { useEffect, useState } from 'react'
-import robotStore from '../data/robotStore'
+import { getAllItems as getRobotStore } from './firebase';
 import ItemList from './ItemList';
 import ItemNavbar from './ItemNavbar';
 import { useParams } from 'react-router-dom';
 
-function getRobotStore(planetId){
-    return new Promise ((res, rej) => {
-        setTimeout(() => {
-            if(planetId !== undefined) {
-                const arrayFiltered = robotStore.filter((robots) => {
-                    return robots.planet === planetId
-                })
-                res(arrayFiltered)
-            }
-            else{
-            res(robotStore)};
-        }, 1000)
-    })
-}
-
 const ItemListContainer = ({name}) => {
 
     const [robotStore, setRobotStore] = useState([]);
-    const {planetId} = useParams();
+    const {locationId} = useParams();
 
     useEffect( () => {
-        getRobotStore(planetId).then( respuesta => {
-            setRobotStore(respuesta)}
-        )
-    }, [planetId])
+        if (locationId === undefined) {
+        getRobotStore().then( res => {
+            setRobotStore(res)}
+        )}
+        else {
+            getRobotStore(locationId).then( res => {
+                setRobotStore(res)}
+            )}
+    }, [locationId])
 
     return (
         <>
