@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getAllItems as getRobotStore } from './firebase';
+import { getAllItems as getRobotStore, getItemsByLocation as getRobotsByLocation } from './firebase';
 import ItemList from './ItemList';
 import ItemNavbar from './ItemNavbar';
 import { useParams } from 'react-router-dom';
@@ -10,12 +10,12 @@ const ItemListContainer = ({name}) => {
     const {locationId} = useParams();
 
     useEffect( () => {
-        if (locationId === undefined) {
+        if (!locationId) {
         getRobotStore().then( res => {
             setRobotStore(res)}
         )}
         else {
-            getRobotStore(locationId).then( res => {
+            getRobotsByLocation(locationId).then( res => {
                 setRobotStore(res)}
             )}
     }, [locationId])

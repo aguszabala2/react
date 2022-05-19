@@ -34,10 +34,14 @@ export async function getAllItems() {
 export async function getItemsByLocation(locationId) {
 
     const myCollec = collection(firestoreDB, "items");
-
-    const queryItem = query(myCollec, where("location", "==", locationId ))
-
+    const queryItem = query(myCollec, where("location", "==", locationId))
     const itemsSnap = await getDocs(queryItem)
+
+    return itemsSnap.docs.map(doc => {
+        return {...doc.data(),
+        id: doc.id,
+        }
+    })
 }
 
 export async function getItem(id) {

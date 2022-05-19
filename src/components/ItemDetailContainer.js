@@ -1,19 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import robotStore from '../data/robotStore'
 import ItemDetail from './ItemDetail';
 import { getItem as getRobots} from './firebase'
-
-// function getRobots(id){
-//     return new Promise ((res, rej) => {
-//         setTimeout(() => {
-//             const robotFound = robotStore.find((robots) =>{
-//                 return parseInt(id) === robots.id
-//             })
-//             res(robotFound);
-//         }, 1000)
-//     })
-// }
 
 const ItemDetailContainer = () => {
     

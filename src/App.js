@@ -18,7 +18,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Welcome name="Juan"/>}/>
               <Route path='/employees' element={<ItemListContainer name="Juan"/>}/>
-              <Route path='/planet/:planetId' element={<ItemListContainer name="Juan"/>}/>
+              <Route path='/location/:locationId' element={<ItemListContainer name="Juan"/>}/>
               <Route path='/employees/:robotsId' element={<ItemDetailContainer/>}/>
               <Route path='/cart/'element={<CartView/>}/>
             </Routes>
