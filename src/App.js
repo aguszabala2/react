@@ -16,8 +16,8 @@ function App() {
         <CartContextProvider>
           <DaisyNavbar/>  
             <Routes>
-              <Route path='/' element={<Welcome name="Juan"/>}/>
-              <Route path='/workers' element={<ItemListContainer name="Juan"/>}/>
+              <Route path='/' element={<Welcome/>}/>
+              <Route path='/workers' element={<ItemListContainer/>}/>
               <Route path='/location/:locationId' element={<ItemListContainer name="Juan"/>}/>
               <Route path='/workers/:robotsId' element={<ItemDetailContainer/>}/>
               <Route path='/cart/'element={<CartView/>}/>

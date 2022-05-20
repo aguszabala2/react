@@ -10,7 +10,7 @@ function CartView() {
     return (
         <>
         <div className='text-center text-white mt-4'>This cart is empty</div>
-        <button className='btn btn-active m-4 glass hover:text-lg text-white-900'><Link to="/employees">Shop</Link></button>
+        <button className='btn btn-active glass m-4 hover:scale-110 text-white-900'><Link to="/employees">Shop</Link></button>
         </>
 
     )}else{
@@ -26,7 +26,7 @@ function CartView() {
                                 <div className="card-body">
                                     <h2 className="text-center font-bold text-lg text-white">{itemCart.name} {itemCart.model}</h2>
                                     <p className='text-center text-white'>{itemCart.quant} x {itemCart.price * itemCart.quant}</p>
-                                    <button className='btn btn-active m-3 glass hover:text-lg text-white-900' onClick={() => removeFromCart(itemCart.id)}>Remove</button>
+                                    <button className='btn btn-active glass m-3 hover:scale-110 text-white-900' onClick={() => removeFromCart(itemCart.id)}>Remove</button>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@ function CartView() {
                 })}
             </div>
             <div className='flex justify-center'>
-                <button className='btn btn-active m-4 glass mt-3 hover:text-lg text-white-900 text-center' onClick={() => clearCart()}>Remove all</button>
+                <button className='btn btn-active glass mt-3 m-4 hover:scale-110 text-white-900 text-center' onClick={() => clearCart()}>Remove all</button>
             </div>
             </>
         )

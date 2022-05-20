@@ -34,7 +34,7 @@ const ItemDetail = ({robots}) => {
                     <p className='text-center text-yellow-400'>{robots.price} /per week</p>
                     {isInCart? 
                         <Link to="/cart">
-                        <button className="btn btn-active glass mt-3 hover:text-lg">CART</button>
+                        <button className="btn btn-active glass mt-3 hover:scale-110">CART</button>
                         </Link>
                     :
                         <ItemCount onAdd={onAdd} stock={robots.stock}/>

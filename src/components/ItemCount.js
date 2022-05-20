@@ -33,7 +33,7 @@ const ItemCount = ({stock, onAdd}) => {
                     <button onClick={addHandler} className="stat-value text-white">+</button>
                 </div>
             </div>
-            <button onClick={clickHandler} className="btn btn-active glass mt-3 hover:text-lg text-white-900 font-bold">HIRE NOW</button>
+            <button onClick={clickHandler} className="btn btn-active glass mt-3 hover:scale-110 text-white-900">HIRE NOW</button>
         </>
     )
 }

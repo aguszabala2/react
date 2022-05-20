@@ -4,7 +4,7 @@ import ItemList from './ItemList';
 import ItemNavbar from './ItemNavbar';
 import { useParams } from 'react-router-dom';
 
-const ItemListContainer = ({name}) => {
+const ItemListContainer = () => {
 
     const [robotStore, setRobotStore] = useState([]);
     const {locationId} = useParams();
@@ -26,7 +26,7 @@ const ItemListContainer = ({name}) => {
         <div tabIndex="0" className="collapse text-slate-100">
             <input type="checkbox"/> 
             <div className="collapse-title text-xl font-medium">
-                Welcome {name}!
+                Welcome!
             </div>
             <div className="collapse-content"> 
                 <p>These are all the robots you can hire to work in your company.</p>
