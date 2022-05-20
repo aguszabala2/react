@@ -9,7 +9,7 @@ const Item = ({robots}) => {
                 <h2 className="text-center font-bold text-lg">{robots.name} {robots.model}</h2>
                 <p className='text-center'>{robots.location}</p>
                 <p className='text-center'>{robots.company}</p>
-                <Link to={`/employees/${robots.id}`}>
+                <Link to={`/workers/${robots.id}`}>
                 <button className="btn btn-active glass mt-3 hover:text-lg">MORE</button>
                 </Link>
             </div>

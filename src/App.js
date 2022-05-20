@@ -17,9 +17,9 @@ function App() {
           <DaisyNavbar/>  
             <Routes>
               <Route path='/' element={<Welcome name="Juan"/>}/>
-              <Route path='/employees' element={<ItemListContainer name="Juan"/>}/>
+              <Route path='/workers' element={<ItemListContainer name="Juan"/>}/>
               <Route path='/location/:locationId' element={<ItemListContainer name="Juan"/>}/>
-              <Route path='/employees/:robotsId' element={<ItemDetailContainer/>}/>
+              <Route path='/workers/:robotsId' element={<ItemDetailContainer/>}/>
               <Route path='/cart/'element={<CartView/>}/>
             </Routes>
         </CartContextProvider>
