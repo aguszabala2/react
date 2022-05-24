@@ -41,9 +41,15 @@ export function CartContextProvider ({children}) {
         setCart([])
     }
 
+    function getTotalPrice() {
+        let totalPrice = 0;
+        cart.forEach(item => totalPrice += item.quant * item.price)
+        return totalPrice
+    }
+
     const contextFunction = () => console.log('Contexto listo')
     return (
-        <Provider value={{contextFunction, cart, addToCart, removeFromCart, clearCart}}>
+        <Provider value={{contextFunction, cart, addToCart, removeFromCart, clearCart, getTotalPrice}}>
             {children}
         </Provider>
         )

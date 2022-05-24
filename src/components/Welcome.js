@@ -10,8 +10,7 @@ const Welcome = () => {
                     <div className="object-right">
                         <h1 className="text-4xl text-white font-bold">Hello Costumer!</h1>
                         <p className="py-2 text-white">Our president, Mr. Zebulon Graydon, gives you his salutations and wishes you a good shopping.</p>
-                        <p className="py-2 text-white">He is now in our Homebase in Mars developing new articles for the benefit of the galaxy and the buisness man of this vast Universe.</p>
-                        <button className="btn btn-active glass mt-3 hover:scale-110">Get Started</button>
+                        <p className="py-2 text-white">He is now in our Homebase in Mars developing new articles for the benefit of the galaxy and the business man of this vast Universe.</p>
                     </div>
                 </div>
             </div>
