@@ -32,10 +32,13 @@ const ItemDetail = ({robots}) => {
                     <p className='text-center'>{robots.location}</p>
                     <p className='text-center'>{robots.company}</p>
                     <p className='text-center text-yellow-400'>{robots.price} /per week</p>
-                    {isInCart? 
+                    {isInCart?
+                        <>
                         <Link to="/cart">
                         <button className="btn btn-active glass mt-3 hover:scale-110">CART</button>
                         </Link>
+                        <Link to="/workers"><button className='btn btn-active glass mt-3 w-auto hover:scale-110 text-white-900'>Keep shopping</button></Link>
+                        </>
                     :
                         <ItemCount onAdd={onAdd} stock={robots.stock}/>
                     }

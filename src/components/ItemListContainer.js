@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getAllItems as getRobotStore, getItemsByLocation as getRobotsByLocation } from './firebase';
 import ItemList from './ItemList';
-import ItemNavbar from './ItemNavbar';
+import ItemNavbar from './navbar/ItemNavbar';
 import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {

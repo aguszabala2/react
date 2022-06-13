@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import CartWidget from './CartWidget'
-import useCartContext from '../context/CartContext'
+import CartWidget from '../CartWidget'
+import useCartContext from '../../context/CartContext'
 
 const DaisyNavbar = () => {
     const {contextFunction} = useCartContext();

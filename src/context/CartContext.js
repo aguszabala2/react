@@ -41,6 +41,12 @@ export function CartContextProvider ({children}) {
         setCart([])
     }
 
+    function getTotalItems() {
+        let totalItems = 0;
+        cart.forEach(item => totalItems += item.quant)
+        return totalItems
+    }
+
     function getTotalPrice() {
         let totalPrice = 0;
         cart.forEach(item => totalPrice += item.quant * item.price)
@@ -49,7 +55,7 @@ export function CartContextProvider ({children}) {
 
     const contextFunction = () => console.log('Contexto listo')
     return (
-        <Provider value={{contextFunction, cart, addToCart, removeFromCart, clearCart, getTotalPrice}}>
+        <Provider value={{contextFunction, cart, addToCart, removeFromCart, clearCart, getTotalPrice, getTotalItems}}>
             {children}
         </Provider>
         )
